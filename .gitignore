@@ -1,0 +1,10 @@
+
+*.svn-base
+
+.svn/format
+
+.svn/entries
+
+.svn/wc.db
+
+Release/球星猜到底.ipa

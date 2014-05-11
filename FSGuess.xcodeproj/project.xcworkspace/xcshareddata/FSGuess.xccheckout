@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0BA7049B-2CBD-4F4B-89C0-BA87922E7ACF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FSGuess</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E2212729-27A5-4AC2-9382-5B468A239F2B</key>
+		<string>http://www.svnchina.com/svn/qiuxingcaidaodi</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FSGuess.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E2212729-27A5-4AC2-9382-5B468A239F2B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>E2212729-27A5-4AC2-9382-5B468A239F2B</key>
+		<string>http://www.svnchina.com/svn/qiuxingcaidaodi</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://www.svnchina.com/svn/qiuxingcaidaodi/FSGuess.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E2212729-27A5-4AC2-9382-5B468A239F2B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2212729-27A5-4AC2-9382-5B468A239F2B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FSGuess</string>
+		</dict>
+	</array>
+</dict>
+</plist>

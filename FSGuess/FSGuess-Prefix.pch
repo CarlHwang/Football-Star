@@ -1,0 +1,34 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "ASLogFile.h"
+#endif
+
+#define ASLog(statement,...) [ASLogFile simAndFileLog:[NSString stringWithFormat:@"[%s %d]%@", __FUNCTION__, __LINE__,statement], __VA_ARGS__]
+#define ASLogDB(statement,...) [ASLogFile simAndFileLog:[NSString stringWithFormat:@"****database****[%s %d]%@", __FUNCTION__, __LINE__,statement], __VA_ARGS__]
+#define ASLogOneArg(...) ASLog(__VA_ARGS__,nil)
+#define ASLogFunction() ASLog(@"",nil)
+
+#ifndef __QQAPI_ENABLE__
+#define __QQAPI_ENABLE__ 1
+#endif
+
+#define WX_APP_ID @"wxc1958e0250616030"
+#define QQ_APP_ID @"101026052"
+#define ADMOB_ID @"a15251a5e20641c"
+#define DMMOB_PUBLISH_ID @"56OJwtzIuNFfWcm2fN"
+#define DMMOB_PLACEMENT_ID @"16TLuhVoApN6ANUkQDuOdaGs"
+#define UMEND_ID @"5320656c56240b7b281015f9"
+#define UMEND_IPAD_ID @"5320683456240b0e3e025531"
