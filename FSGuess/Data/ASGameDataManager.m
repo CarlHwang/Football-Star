@@ -19,6 +19,7 @@
 @property (nonatomic,assign) NSDictionary *clubs;
 @property (nonatomic,assign) NSDictionary *players;
 @property (nonatomic,assign) NSDictionary *missionMatchings;
+
 @end
 
 @implementation ASGameDataManager

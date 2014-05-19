@@ -10,9 +10,18 @@
 
 @interface ASGlobalDataManager : NSObject
 
-@property (nonatomic,assign) NSInteger latestMission;
-@property (nonatomic,assign) BOOL hasShowDetailAlert;
-
 +(ASGlobalDataManager *)getInstance;
+
++(NSInteger)rewardCoinWhenBecomeActive;
++(void)setRewardCoinWhenBecomeActive:(NSInteger)coinValue;
+
++(NSInteger)latestMission;
++(void)setLatestMission:(NSInteger)latestMission;
+
++(BOOL)hasShowDetailAlert;
++(void)setHasShowDetailAlert:(BOOL)hasShowDetailAlert;
+
++(BOOL)showRating;
++(void)disableShowRating;
 
 @end

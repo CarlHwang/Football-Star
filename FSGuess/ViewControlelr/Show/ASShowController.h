@@ -16,7 +16,7 @@
 -(void)showControllerDidPressGameOver;
 @end
 
-@interface ASShowController : ASViewController<ASControllerTypeAssert>
+@interface ASShowController : ASViewController<ASControllerTypeAssert, UIAlertViewDelegate>
 
 @property (nonatomic,assign) id<ASShowControllerDelegate> delegate;
 

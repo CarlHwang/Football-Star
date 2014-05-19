@@ -9,7 +9,10 @@
 #import "ASShowController.h"
 #import "ASMacros.h"
 #import "ASImageManager.h"
+#import "ASFunctions.h"
 #import "ASExpandButton.h"
+#import "ASGlobalDataManager.h"
+
 #import "WXApi.h"
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "MobClick.h"
@@ -72,6 +75,44 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:SHOW_PAGE];
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([ASGlobalDataManager showRating]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%C如果喜欢我们的App，请给予我们五星评价鼓励一下吧。\n可获得30个金币奖励哦！", 0xE418] delegate:self cancelButtonTitle:@"残忍地拒绝" otherButtonTitles:@"现在去评价", nil];
+        [alertView show];
+        [alertView release];
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([title isEqualToString:@"现在去评价"]) {
+        NSString *ratingURL;
+        if ([ASFunctions systemVersionNotSmallerThan:7.0]) {
+            ratingURL = @"itms-apps://itunes.apple.com/app/id838889890";
+        }else{
+            ratingURL = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=838889890";
+        }
+        
+        NSURL *URL = [NSURL URLWithString:ratingURL];
+        if ([[UIApplication sharedApplication] canOpenURL:URL]) {
+            
+            [[UIApplication sharedApplication] openURL:URL];
+            [ASGlobalDataManager setRewardCoinWhenBecomeActive:30];
+            
+        }else{
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"抱歉，打开评价页失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+            [alertView release];
+        }
+    }
+    
+    [ASGlobalDataManager disableShowRating];
+}
+
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

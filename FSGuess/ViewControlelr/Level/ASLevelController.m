@@ -82,7 +82,7 @@
     CGSize orgSize = CGSizeMake(CASE_WIDTH, CASE_HEIGHT);
     CGSize prsSize = CGSizeMake(CASECLICK_BUTTON_WIDTH, CASECLICK_BUTTON_HEIGHT);
     
-    NSInteger lastestMission = [[ASGlobalDataManager getInstance] latestMission];
+    NSInteger lastestMission = [ASGlobalDataManager latestMission];
     
     for (NSInteger iMission = 0; iMission < _gamesCount; iMission++) {
         
@@ -129,7 +129,7 @@
 }
 
 -(void)autoEnterLatestMission{
-    ASGameController *gameController = [ASGameController controllerWithMission:[[ASGlobalDataManager getInstance] latestMission]];
+    ASGameController *gameController = [ASGameController controllerWithMission:[ASGlobalDataManager latestMission]];
     gameController.delegate = self;
     [self.navigationController pushViewController:gameController animated:YES];
 }
@@ -144,10 +144,10 @@
 }
 
 -(void)gameController:(ASGameController *)controller didStartMission:(NSInteger)mission{
-    if ([[ASGlobalDataManager getInstance] latestMission] >= mission || mission > _gamesCount) {
+    if ([ASGlobalDataManager latestMission] >= mission || mission > _gamesCount) {
         return;
     }
-    [[ASGlobalDataManager getInstance] setLatestMission:mission];
+    [ASGlobalDataManager setLatestMission:mission];
     for (id subview in _pagingScrollView.subviews) {
         if ([subview isKindOfClass:[ASCaseButton class]] && [subview mission] == mission) {
             [subview setOpened:YES];

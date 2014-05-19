@@ -12,6 +12,7 @@
 #import "ASMacros.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "ASSoundPlayer.h"
+#import "ASGlobalDataManager.h"
 
 @interface ASAppDelegate()
 
@@ -58,6 +59,15 @@
 }
 
 -(void)applicationDidBecomeActive:(UIApplication *)application{
+    NSInteger coinValue = [ASGlobalDataManager rewardCoinWhenBecomeActive];
+    if (coinValue > 0) {
+        [ASCoinManager addCoin:coinValue];
+        [ASGlobalDataManager setRewardCoinWhenBecomeActive:0];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"%C已经往您的金库塞了%d个金币哦~", 0xE418, coinValue] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+        [alertView release];
+    }
+    
     //取消之前所有的本地通知
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     

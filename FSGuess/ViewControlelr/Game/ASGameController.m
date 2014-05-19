@@ -138,6 +138,9 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:GAME_PAGE];
+    
+    //为了在其他地方刷新过金币时刷新显示。
+    [self refreshCoinView];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -540,7 +543,7 @@
         case 3:
             if (_indexOfDetailWillShow >= 0) {
                 [self transationForDetail];
-                [[ASGlobalDataManager getInstance] setHasShowDetailAlert:YES];
+                [ASGlobalDataManager setHasShowDetailAlert:YES];
             }
             break;
         default:
@@ -562,7 +565,7 @@
         [self showDetailForIndex:iIndex];
     }else{
         _indexOfDetailWillShow = iIndex;
-        if (![[ASGlobalDataManager getInstance] hasShowDetailAlert]) {
+        if (![ASGlobalDataManager hasShowDetailAlert]) {
             UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%C提示",0xE018] message:@"查看详细资料会减少该关卡获得的奖励\n(确认后将不再出现该提示)" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil] autorelease];
             [alertView setTag:3];
             [alertView show];
