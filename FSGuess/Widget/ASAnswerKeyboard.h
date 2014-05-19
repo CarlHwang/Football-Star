@@ -23,8 +23,8 @@
 -(void)setCorrectAnswer:(NSString *)correctAnswer;
 -(BOOL)keyboardCompleted;
 -(void)setEnable:(BOOL)enabled atIndex:(NSInteger)iIndex;
--(BOOL)isButtonEnabledAtIndex:(NSInteger)iIndex;
+-(BOOL)keyboardEnabledAtIndex:(NSInteger)iIndex;
 
--(NSArray *)unfillContentIndexs;
+-(NSInteger)indexForContent:(NSString *)sContent;
 -(NSArray *)unfillContents;
 @end

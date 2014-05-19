@@ -86,6 +86,16 @@
     return _hideButtonNumber < 10;
 }
 
+-(BOOL)keyboardEnabledForContent:(NSString *)sContent{
+    for (NSInteger iIndex=0; iIndex<[self.buttonList count]; iIndex++) {
+        ASOptionKeyButton *button = [self.buttonList objectAtIndex:iIndex];
+        if ([[button content] isEqualToString:sContent] && !button.hidden) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 -(CGRect)frameForButtonWithRow:(NSInteger)iRow column:(NSInteger)iColumn{
     return CGRectMake(self.sideLength*iColumn, self.sideLength*iRow, self.sideLength, self.sideLength);
 }

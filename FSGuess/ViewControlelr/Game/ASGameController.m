@@ -421,13 +421,21 @@
 }
 
 -(void)share{
-    //截图
+    //截图，先去掉广告
+    for (id banner in _adBanners) {
+        [banner setHidden:YES];
+    }
     CGRect rect =self.view.frame;
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self.view.layer renderInContext:context];
     self.screenShot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+    //重新显示广告
+    for (id banner in _adBanners) {
+        [banner setHidden:NO];
+    }
     
     if (!_shareView) {
         self.shareView = [ASShareView shareViewWithTitle:@"问问朋友"];
@@ -455,31 +463,27 @@
         [alertView release];
         return;
     }
-    NSArray *unfillIndexs = [_answerBoard unfillContentIndexs];
-    
-    if ([unfillIndexs count] > 0) {
-        NSInteger iRandom = arc4random() % [unfillIndexs count];
-        NSInteger iRandomIndex = [[unfillIndexs objectAtIndex:iRandom] integerValue];
-        NSString *sCharater = [[_answerBoard correctAnswer] substringWithRange:NSMakeRange(iRandomIndex, 1)];
-        [_answerBoard setEnable:NO atIndex:iRandomIndex];
-        [_keyboard autoclickForButtonContent:sCharater toAnwerIndex:iRandomIndex];
-        [self refreshCoinView];
-    }else{
-        //进入这里表示当前所有空都被填满
-        while (YES) {
-            NSInteger iRandomIndex = arc4random() % [[_answerBoard correctAnswer] length];
-            if ([_answerBoard isButtonEnabledAtIndex:iRandomIndex]) {
-                //随机出一个非自动生成的空格，先自动取消这个空格的值
-                [_answerBoard autoClickAtIndex:iRandomIndex];
-                //再选择匹配这个空的正确值填进去
-                NSString *sCharater = [[_answerBoard correctAnswer] substringWithRange:NSMakeRange(iRandomIndex, 1)];
-                [_answerBoard setEnable:NO atIndex:iRandomIndex];
-                [_keyboard autoclickForButtonContent:sCharater toAnwerIndex:iRandomIndex];
-                [self refreshCoinView];
-                break;
+
+    while (YES) {
+        NSInteger iRandomIndex = arc4random() % [[_answerBoard correctAnswer] length];
+        //先从回答框中选择一个enabled（即不是通过道具生成的）格子
+        if ([_answerBoard keyboardEnabledAtIndex:iRandomIndex]) {
+            [_answerBoard autoClickAtIndex:iRandomIndex]; //将这个格子里的内容弹出
+            
+            NSString *sCharater = [[_answerBoard correctAnswer] substringWithRange:NSMakeRange(iRandomIndex, 1)];
+            //然后看看选择框里面，这个字符还有没有（是否已经被用了）
+            if (![_keyboard keyboardEnabledForContent:sCharater]) {
+                //如果没有这个字符了, 去回答框弹出这个字符
+                NSInteger iCancelToClickIndex = [_answerBoard indexForContent:sCharater];
+                [_answerBoard autoClickAtIndex:iCancelToClickIndex];
             }
+            
+            //再将刚刚那个字符自动压入回答框
+            [_answerBoard setEnable:NO atIndex:iRandomIndex];
+            [_keyboard autoclickForButtonContent:sCharater toAnwerIndex:iRandomIndex];
+            [self refreshCoinView];
+            break;
         }
-        return;
     }
 }
 

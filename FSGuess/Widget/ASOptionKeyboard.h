@@ -22,5 +22,6 @@
 -(void)cancelSelectKeyObject:(ASKeyObject *)object;
 -(void)autoclickForButtonContent:(NSString *)sContent toAnwerIndex:(NSInteger)iAnswerIndex;
 -(void)hideButtonExceptContents:(NSArray *)contents;
+-(BOOL)keyboardEnabledForContent:(NSString *)sContent;
 -(BOOL)canHideButton;
 @end

@@ -1059,8 +1059,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WENZHI HUANG (T9276L2J67)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess/ShareSDKs/QQSDK,
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess,
 					"$(PROJECT_DIR)/FSGuess/ShareSDKs/QQSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1068,11 +1066,8 @@
 				INFOPLIST_FILE = "FSGuess/FSGuess-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess/ShareSDKs/WeChatSDK_1.4.2.1,
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess/AdSDKs/Admob,
 					"$(PROJECT_DIR)/FSGuess/AnalyticSDKs",
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/DomobAdSDK",
-					"$(PROJECT_DIR)/FSGuess/ShareSDKs/WeixinSDK",
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/Admob",
 					"$(PROJECT_DIR)/FSGuess/ShareSDKs/WeChatSDK_1.4.2.1",
 				);
@@ -1100,8 +1095,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WENZHI HUANG (TB2W3LB7BK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess/ShareSDKs/QQSDK,
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess,
 					"$(PROJECT_DIR)/FSGuess/ShareSDKs/QQSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1109,11 +1102,8 @@
 				INFOPLIST_FILE = "FSGuess/FSGuess-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess/ShareSDKs/WeChatSDK_1.4.2.1,
-					/Volumes/Hwang/workspace/AfroStudio/FSGuess/FSGuess/AdSDKs/Admob,
 					"$(PROJECT_DIR)/FSGuess/AnalyticSDKs",
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/DomobAdSDK",
-					"$(PROJECT_DIR)/FSGuess/ShareSDKs/WeixinSDK",
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/Admob",
 					"$(PROJECT_DIR)/FSGuess/ShareSDKs/WeChatSDK_1.4.2.1",
 				);

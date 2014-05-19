@@ -17,16 +17,18 @@
 
 @interface ASZoomKeyboard : UIView
 
+@property(nonatomic,assign) id <ASZoomKeyboardDelegate> delegate;
+@property(nonatomic,assign) NSInteger rowNum;
+@property(nonatomic,assign) NSInteger columnNum;
+@property(nonatomic,assign) NSInteger sideLength;
+@property(nonatomic,assign) NSMutableArray *buttonList;
+
+
 -(void)autoClickAtIndex:(NSInteger)iIndex;
 
 #pragma mark - 子类方法，外部勿调用
 -(void)autoClickAtIndex:(NSInteger)iIndex withObject:(id)object;
 
-@property(nonatomic,assign) id <ASZoomKeyboardDelegate> delegate;
-@property(nonatomic,assign) NSInteger rowNum;
-@property(nonatomic,assign) NSInteger columnNum;
-@property(nonatomic,assign) NSInteger sideLength;
 
-@property(nonatomic,assign) NSMutableArray *buttonList;
 
 @end

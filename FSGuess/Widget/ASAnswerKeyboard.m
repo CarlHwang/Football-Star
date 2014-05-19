@@ -132,17 +132,31 @@
     }
 }
 
--(NSArray *)unfillContentIndexs{
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (NSInteger iIndex=0; iIndex<[_correctAnswer length]; iIndex++) {
+-(NSInteger)indexForContent:(NSString *)sContent{
+    for (NSInteger iIndex = 0; iIndex < [_correctAnswer length]; iIndex++) {
         NSNumber *num = [NSNumber numberWithInteger:iIndex];
         id object = [_inputContent objectForKey:num];
         if (object == [NSNull null]) {
-            [array addObject:num];
+            continue;
+        }
+        if ([[object charater] isEqualToString:sContent]) {
+            return iIndex;
         }
     }
-    return [array autorelease];
+    return -1;
 }
+
+//-(NSArray *)unfillContentIndexs{
+//    NSMutableArray *array = [[NSMutableArray alloc] init];
+//    for (NSInteger iIndex=0; iIndex<[_correctAnswer length]; iIndex++) {
+//        NSNumber *num = [NSNumber numberWithInteger:iIndex];
+//        id object = [_inputContent objectForKey:num];
+//        if (object == [NSNull null]) {
+//            [array addObject:num];
+//        }
+//    }
+//    return [array autorelease];
+//}
 
 -(NSArray *)unfillContents{
     NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -169,7 +183,7 @@
     [[self.buttonList objectAtIndex:iIndex] setEnabled:enabled];
 }
 
--(BOOL)isButtonEnabledAtIndex:(NSInteger)iIndex{
+-(BOOL)keyboardEnabledAtIndex:(NSInteger)iIndex{
     return ((ASAnsweKeyButton *)[self.buttonList objectAtIndex:iIndex]).enabled;
 }
 

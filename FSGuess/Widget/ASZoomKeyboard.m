@@ -67,6 +67,7 @@
     }
 }
 
+//for answerboard
 -(void)autoClickAtIndex:(NSInteger)iIndex{
     ASZoomKeyButton *button = [self.buttonList objectAtIndex:iIndex];
     if (button.enabled) {
@@ -77,6 +78,7 @@
     }
 }
 
+//for optionboard
 -(void)autoClickAtIndex:(NSInteger)iIndex withObject:(id)object{
     ASZoomKeyButton *button = [self.buttonList objectAtIndex:iIndex];
     if (button.enabled) {

@@ -44,6 +44,10 @@ static ASSoundPlayer *sharedPlayer = nil;
 }
 
 -(void)initialize{
+    //保证不打断其他app的声音
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryAmbient error:nil];
+    
     for (NSInteger index=0; index<5; index++) {
         AVAudioPlayer *player = [[[AVAudioPlayer alloc] initWithData:[ASImageManager soundForPath:@"press.wav" cacheIt:YES] error:nil] autorelease];
         if (player) {
