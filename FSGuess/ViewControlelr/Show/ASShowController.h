@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ASViewController.h"
+#import "ASShareView.h"
 
 @class ASShowController;
 
@@ -16,7 +17,7 @@
 -(void)showControllerDidPressGameOver;
 @end
 
-@interface ASShowController : ASViewController<ASControllerTypeAssert, UIAlertViewDelegate>
+@interface ASShowController : ASViewController<ASControllerTypeAssert, UIAlertViewDelegate, ASShareViewDelegate>
 
 @property (nonatomic,assign) id<ASShowControllerDelegate> delegate;
 

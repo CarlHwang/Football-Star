@@ -429,7 +429,7 @@
         [banner setHidden:YES];
     }
     CGRect rect =self.view.frame;
-    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale); //根据屏幕尺寸截图，否则会以低清分辨率截
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self.view.layer renderInContext:context];
     self.screenShot = UIGraphicsGetImageFromCurrentImageContext();

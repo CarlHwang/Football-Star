@@ -32,3 +32,7 @@
 #define DMMOB_PLACEMENT_ID @"16TLuhVoApN6ANUkQDuOdaGs"
 #define UMEND_ID @"5320656c56240b7b281015f9"
 #define UMEND_IPAD_ID @"5320683456240b0e3e025531"
+
+#define RATING_URL_7 @"itms-apps://itunes.apple.com/app/id838889890"
+#define RATING_URL_6 @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=838889890"
+#define APPSTORE_URL @"http://itunes.apple.com/cn/app/qiu-xing-cai-dao-di/id838889890?mt=8"

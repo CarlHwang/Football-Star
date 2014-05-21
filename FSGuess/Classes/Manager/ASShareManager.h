@@ -10,9 +10,16 @@
 
 @interface ASShareManager : NSObject
 
+//游戏中分享
 +(BOOL)shareToWXSessionWithImage:(UIImage *)image;
 +(BOOL)shareToWXTimelineWithImage:(UIImage *)image;
 +(BOOL)shareToQQSessionWithImage:(UIImage *)image;
 +(BOOL)shareToQQTimelineWithImage:(UIImage *)image;
+
+//回答正确页推荐
++(BOOL)recommendToWXSession;
++(BOOL)recommendToWXTimeline;
++(BOOL)recommendToQQSession;
++(BOOL)recommendToQQTimeline;
 
 @end

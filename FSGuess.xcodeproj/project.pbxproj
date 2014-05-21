@@ -45,6 +45,7 @@
 		C348056D1886B4C800BA38C9 /* ASClubData.m in Sources */ = {isa = PBXBuildFile; fileRef = C348056C1886B4C800BA38C9 /* ASClubData.m */; };
 		C34805701886B60700BA38C9 /* ASPlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C348056F1886B60700BA38C9 /* ASPlayerData.m */; };
 		C34805781886BA8800BA38C9 /* ASGameDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C34805771886BA8800BA38C9 /* ASGameDataManager.m */; };
+		C34B084A192C955B00C8E86B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C34B0849192C955B00C8E86B /* icon.png */; };
 		C34EBFDE17FB069E006203B7 /* PagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34EBFDD17FB069E006203B7 /* PagedFlowView.m */; };
 		C34EBFE117FB1DD1006203B7 /* ASTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34EBFE017FB1DD1006203B7 /* ASTipsView.m */; };
 		C351DBA11894E54900567737 /* ASCaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C351DBA01894E54900567737 /* ASCaseButton.m */; };
@@ -180,6 +181,7 @@
 		C348056F1886B60700BA38C9 /* ASPlayerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlayerData.m; sourceTree = "<group>"; };
 		C34805761886BA8800BA38C9 /* ASGameDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASGameDataManager.h; sourceTree = "<group>"; };
 		C34805771886BA8800BA38C9 /* ASGameDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGameDataManager.m; sourceTree = "<group>"; };
+		C34B0849192C955B00C8E86B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C34EBFDC17FB069E006203B7 /* PagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedFlowView.h; sourceTree = "<group>"; };
 		C34EBFDD17FB069E006203B7 /* PagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedFlowView.m; sourceTree = "<group>"; };
 		C34EBFDF17FB1DD1006203B7 /* ASTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTipsView.h; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 		C33C983317F69B4300C55E08 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C34B0849192C955B00C8E86B /* icon.png */,
 				C39E228617FDDD2A00881266 /* YuppySC-Regular.ttf */,
 				C33C983E17F69B4300C55E08 /* Images.xcassets */,
 				C33C983417F69B4300C55E08 /* FSGuess-Info.plist */,
@@ -864,6 +867,7 @@
 				C3C301E418BF61CB001EA96B /* ASLeagueData.json in Resources */,
 				C33C983717F69B4300C55E08 /* InfoPlist.strings in Resources */,
 				C33C988717F69BEC00C55E08 /* Resource in Resources */,
+				C34B084A192C955B00C8E86B /* icon.png in Resources */,
 				C3CCB9D718E9B6C9003ADE68 /* ASMissionData.json in Resources */,
 				C33C983F17F69B4300C55E08 /* Images.xcassets in Resources */,
 				C39099D2191FC6CE00FECBB5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,

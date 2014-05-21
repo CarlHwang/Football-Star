@@ -38,6 +38,7 @@
     
     NSString *sUmendId = DEVICE_BASIC_IPHONE() ? UMEND_ID : UMEND_IPAD_ID;
     [MobClick startWithAppkey:sUmendId reportPolicy:SEND_INTERVAL channelId:nil];
+    [MobClick checkUpdate];
     
     [WXApi registerApp:WX_APP_ID];
     [[TencentOAuth alloc] initWithAppId:QQ_APP_ID andDelegate:nil];

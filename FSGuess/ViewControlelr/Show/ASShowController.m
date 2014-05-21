@@ -12,6 +12,7 @@
 #import "ASFunctions.h"
 #import "ASExpandButton.h"
 #import "ASGlobalDataManager.h"
+#import "ASShareManager.h"
 
 #import "WXApi.h"
 #import <TencentOpenAPI/QQApiInterface.h>
@@ -50,6 +51,7 @@
 @property (nonatomic,assign) UIView *coinView;
 @property (nonatomic,assign) UILabel *coinLabel;
 @property (nonatomic,assign) UIView *unterminateView;
+@property (nonatomic,retain) ASShareView *shareView;
 @end
 
 @implementation ASShowController
@@ -57,6 +59,16 @@
 +(ASShowController *)createController{
     ASShowController *controller = [[ASShowController alloc] init];
     return [controller autorelease];
+}
+
+-(void)dealloc{
+    ASLogFunction();
+    [_coinView release];
+    [_showView release];
+    [_coinLabel release];
+    [_unterminateView release];
+    [_shareView release];
+    [super dealloc];
 }
 
 -(void)loadView{
@@ -89,14 +101,10 @@
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     
     if ([title isEqualToString:@"现在去评价"]) {
-        NSString *ratingURL;
-        if ([ASFunctions systemVersionNotSmallerThan:7.0]) {
-            ratingURL = @"itms-apps://itunes.apple.com/app/id838889890";
-        }else{
-            ratingURL = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=838889890";
-        }
         
+        NSString *ratingURL = [ASFunctions systemVersionNotSmallerThan:7.0] ? RATING_URL_7 : RATING_URL_6;
         NSURL *URL = [NSURL URLWithString:ratingURL];
+        
         if ([[UIApplication sharedApplication] canOpenURL:URL]) {
             
             [[UIApplication sharedApplication] openURL:URL];
@@ -120,9 +128,10 @@
 }
 
 -(void)initializeShareButton{
-//    ASExpandButton *shareButton = [ASExpandButton createButtonWithOrgSize:SHARE_BUTTON_SIZE prsSize:SHARE_CLICK_BUTTON_SIZE center:CGPointMake(SHARE_BUTTON_ORIGIN_X+0.5*SHARE_BUTTON_SIZE.width, SHARE_BUTTON_ORIGIN_Y+0.5*SHARE_BUTTON_SIZE.height)];
-//    [shareButton setOrgImageForName:AS_RS_ANSWERPAGE_SHARE_BUTTON prsImageForName:AS_RS_ANSWERPAGE_SHARE_BUTTONCLICK];
-//    [self.view addSubview:shareButton];
+    ASExpandButton *shareButton = [ASExpandButton createButtonWithOrgSize:SHARE_BUTTON_SIZE prsSize:SHARE_CLICK_BUTTON_SIZE center:CGPointMake(SHARE_BUTTON_ORIGIN_X+0.5*SHARE_BUTTON_SIZE.width, SHARE_BUTTON_ORIGIN_Y+0.5*SHARE_BUTTON_SIZE.height)];
+    [shareButton setOrgImageForName:AS_RS_ANSWERPAGE_SHARE_BUTTON prsImageForName:AS_RS_ANSWERPAGE_SHARE_BUTTONCLICK];
+    [shareButton addTarget:self action:@selector(share) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:shareButton];
 }
 
 -(void)initializeContinueButton{
@@ -189,35 +198,12 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
--(void)send{
-//    WXMediaMessage *message = [WXMediaMessage message];
-//    [message setThumbImage:[ASImageManager imageForPath:AS_RS_BUTTON_LIGHT cacheIt:YES withType:IMAGE_RESOURCE_TYPE_PHONEORPAD]];
-//    
-//    UIImage* image = [ASImageManager imageForPath:AS_RS_BUTTON_LIGHT cacheIt:YES withType:IMAGE_RESOURCE_TYPE_PHONEORPAD];
-//    WXImageObject *ext = [WXImageObject object];
-//    ext.imageData = UIImagePNGRepresentation(image);
-//
-//    message.mediaObject = ext;
-//    
-//    SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
-//    req.bText = NO;
-//    req.message = message;
-//    req.scene = WXSceneSession;
-//    
-//    [WXApi sendReq:req];
-//    NSString *imgPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"test.gif"];
-//    NSData *imgData = [NSData dataWithContentsOfFile:imgPath];
-    
-    UIImage* image = [ASImageManager imageForPath:AS_RS_BUTTON_LIGHT cacheIt:YES withType:IMAGE_RESOURCE_TYPE_PHONEORPAD];
-    NSData *imgData = UIImagePNGRepresentation(image);
-    QQApiImageObject *imgObj = [QQApiImageObject objectWithData:imgData
-                                               previewImageData:imgData
-                                                          title:@"QQ互联测试"
-                                                    description:@"QQ互联测试分享"];
-    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
-    //将内容分享到qq
-    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
-    ASLog(@"%d",sent);
+-(void)share{
+    if (!_shareView) {
+        self.shareView = [ASShareView shareViewWithTitle:@"推荐给朋友"];
+        [_shareView setDelegate:self];
+    }
+    [self.view addSubview:_shareView];
 }
 
 -(void)setControllerType{
@@ -225,12 +211,42 @@
 }
 
 
--(void)dealloc{
-    ASLogFunction();
-    [_coinView release];
-    [_showView release];
-    [_coinLabel release];
-    [_unterminateView release];
-    [super dealloc];
+#pragma mark - ASShareView delegate
+
+-(void)shareToWXSession{
+    BOOL result = [ASShareManager recommendToWXSession];
+    [self handleShareResult:result];
 }
+
+-(void)shareToWXTimeline{
+    BOOL result = [ASShareManager recommendToWXTimeline];
+    [self handleShareResult:result];
+}
+
+-(void)shareToQQSession{
+    BOOL result = [ASShareManager recommendToQQSession];
+    [self handleShareResult:result];
+}
+
+-(void)shareToQQTimeline{
+    BOOL result = [ASShareManager recommendToQQTimeline];
+    [self handleShareResult:result];
+}
+
+-(void)shareToWeibo{
+    
+}
+
+-(void)handleShareResult:(BOOL)success{
+    [_shareView removeFromSuperview];
+    
+    if (!success) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%C提示",0xE018] message:@"分享失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView setTag:99];
+        [alertView show];
+        [alertView release];
+    }
+}
+
+
 @end
