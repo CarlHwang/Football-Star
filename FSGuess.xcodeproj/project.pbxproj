@@ -39,6 +39,8 @@
 		C33DB1AB18A553AB008ADBE3 /* ASOptionKeyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C33DB1AA18A553AB008ADBE3 /* ASOptionKeyButton.m */; };
 		C33DB1AE18A55A7D008ADBE3 /* ASAnsweKeyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C33DB1AD18A55A7D008ADBE3 /* ASAnsweKeyButton.m */; };
 		C33E3D7318D09B09008FA20C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33E3D7018D09B09008FA20C /* libMobClickLibrary.a */; };
+		C33EBACE192E58B50092B069 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C33EBACB192E58B50092B069 /* WeiboSDK.bundle */; };
+		C33EBAD6192E5A4C0092B069 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33EBAD5192E5A4C0092B069 /* libWeiboSDK.a */; };
 		C3400F451893FD0A00391B95 /* ASGlobalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3400F441893FD0A00391B95 /* ASGlobalDataManager.m */; };
 		C345B7251888210800645CC9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C345B7241888210800645CC9 /* JSONKit.m */; };
 		C348056A1886B30A00BA38C9 /* ASLeagueData.m in Sources */ = {isa = PBXBuildFile; fileRef = C34805691886B30A00BA38C9 /* ASLeagueData.m */; };
@@ -169,6 +171,9 @@
 		C33DB1AD18A55A7D008ADBE3 /* ASAnsweKeyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAnsweKeyButton.m; sourceTree = "<group>"; };
 		C33E3D7018D09B09008FA20C /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		C33E3D7118D09B09008FA20C /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		C33EBACB192E58B50092B069 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		C33EBACC192E58B50092B069 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		C33EBAD5192E5A4C0092B069 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		C3400F431893FD0A00391B95 /* ASGlobalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASGlobalDataManager.h; sourceTree = "<group>"; };
 		C3400F441893FD0A00391B95 /* ASGlobalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGlobalDataManager.m; sourceTree = "<group>"; };
 		C345B7231888210800645CC9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -303,6 +308,7 @@
 				C3F70B371904156600905E2E /* libDomobAdSDK.a in Frameworks */,
 				C33C982F17F69B4300C55E08 /* CoreGraphics.framework in Frameworks */,
 				C3F951F218BB7CBF001F6924 /* SystemConfiguration.framework in Frameworks */,
+				C33EBAD6192E5A4C0092B069 /* libWeiboSDK.a in Frameworks */,
 				C3F951F018BB7CB1001F6924 /* libiconv.dylib in Frameworks */,
 				C3F951EE18BB7CA7001F6924 /* Security.framework in Frameworks */,
 				C39099CE191FC67700FECBB5 /* TencentOpenAPI.framework in Frameworks */,
@@ -585,6 +591,16 @@
 			path = AnalyticSDKs;
 			sourceTree = "<group>";
 		};
+		C33EBAC9192E58B50092B069 /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C33EBAD5192E5A4C0092B069 /* libWeiboSDK.a */,
+				C33EBACB192E58B50092B069 /* WeiboSDK.bundle */,
+				C33EBACC192E58B50092B069 /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
+			sourceTree = "<group>";
+		};
 		C34805661886B20C00BA38C9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +641,7 @@
 		C39099C6191FC67700FECBB5 /* ShareSDKs */ = {
 			isa = PBXGroup;
 			children = (
+				C33EBAC9192E58B50092B069 /* libWeiboSDK */,
 				C39099DA191FC9EF00FECBB5 /* WeChatSDK_1.4.2.1 */,
 				C39099C7191FC67700FECBB5 /* QQSDK */,
 			);
@@ -872,6 +889,7 @@
 				C33C983F17F69B4300C55E08 /* Images.xcassets in Resources */,
 				C39099D2191FC6CE00FECBB5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				C3F70B361904156600905E2E /* DomobAdSDKBundle.bundle in Resources */,
+				C33EBACE192E58B50092B069 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1078,6 +1096,8 @@
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/DomobAdSDK",
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/Admob",
 					"$(PROJECT_DIR)/FSGuess/ShareSDKs/WeChatSDK_1.4.2.1",
+					"$(PROJECT_DIR)/FSGuess/ShareSDKs/libWeiboSDK",
+					"/Users/Carl/Desktop/球星猜到底sdks/weibo_ios_sdk-master/libWeiboSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -1115,6 +1135,8 @@
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/DomobAdSDK",
 					"$(PROJECT_DIR)/FSGuess/AdSDKs/Admob",
 					"$(PROJECT_DIR)/FSGuess/ShareSDKs/WeChatSDK_1.4.2.1",
+					"$(PROJECT_DIR)/FSGuess/ShareSDKs/libWeiboSDK",
+					"/Users/Carl/Desktop/球星猜到底sdks/weibo_ios_sdk-master/libWeiboSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
