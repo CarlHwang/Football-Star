@@ -24,4 +24,7 @@
 +(BOOL)showRating;
 +(void)disableShowRating;
 
++(NSString *)handledUpdateVersion;
++(void)setHandledUpdateVersion:(NSString *)version;
+
 @end

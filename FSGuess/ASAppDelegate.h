@@ -14,7 +14,7 @@
 #import "TencentOpenAPI/QQApiInterface.h"
 #endif
 
-@interface ASAppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate, QQApiInterfaceDelegate>
+@interface ASAppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate, QQApiInterfaceDelegate, UIAlertViewDelegate>
 @property (nonatomic,retain) UIWindow *window;
 @property (nonatomic,retain) UINavigationController *navigationController;
 @end

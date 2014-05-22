@@ -13,12 +13,70 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "ASSoundPlayer.h"
 #import "ASGlobalDataManager.h"
+#import "ASFunctions.h"
 
 @interface ASAppDelegate()
-
+@property (nonatomic, retain) NSURL *updateURL;
 @end
 
 @implementation ASAppDelegate
+
+
+#pragma mark - version update
+
+-(void)handleUpdateDictionary:(NSDictionary *)infoDict{
+    
+    NSString *newVersion = [infoDict objectForKey:@"version"];
+    if (!newVersion) {
+        return;
+    }
+    
+    BOOL update = [[infoDict objectForKey:@"update"] boolValue];
+    BOOL needJumpAppStrore = NO;
+    
+    if (update) {
+        
+        NSString *handledVersion = [ASGlobalDataManager handledUpdateVersion];
+        if (!handledVersion || ![newVersion isEqualToString:handledVersion]) {
+            needJumpAppStrore = YES;
+        }
+    }
+    
+    if (needJumpAppStrore) {
+        [ASGlobalDataManager setHandledUpdateVersion:newVersion];
+        NSString *updateLog = [infoDict objectForKey:@"update_log"];
+        
+        NSArray *URLForVersion = [[infoDict objectForKey:@"path"] componentsSeparatedByString:@"$$"];
+        NSString *URLString = [ASFunctions systemVersionNotSmallerThan:7.0] ? [URLForVersion objectAtIndex:1] : [URLForVersion objectAtIndex:0];
+        
+        self.updateURL = [NSURL URLWithString:URLString];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"有可用的新版本%@",newVersion] message:updateLog delegate:self cancelButtonTitle:@"忽略此版本" otherButtonTitles:@"访问Store", nil];
+        [alertView show];
+        [alertView release];
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([title isEqualToString:@"访问Store"]) {
+
+        
+        if ([[UIApplication sharedApplication] canOpenURL:_updateURL]) {
+            [[UIApplication sharedApplication] openURL:_updateURL];
+            self.updateURL = nil;
+            
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"无法跳转到AppStore" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+            [alertView release];
+        }
+    }
+}
+
+#pragma mark - application delegate
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [ASCoinManager getInstance];
@@ -38,13 +96,12 @@
     
     NSString *sUmendId = DEVICE_BASIC_IPHONE() ? UMEND_ID : UMEND_IPAD_ID;
     [MobClick startWithAppkey:sUmendId reportPolicy:SEND_INTERVAL channelId:nil];
-    [MobClick checkUpdate];
+    [MobClick checkUpdateWithDelegate:self selector:@selector(handleUpdateDictionary:)];
     
     [WXApi registerApp:WX_APP_ID];
     [[TencentOAuth alloc] initWithAppId:QQ_APP_ID andDelegate:nil];
     return YES;
 }
-
 -(void)applicationWillResignActive:(UIApplication *)application{
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -150,6 +207,7 @@
 
 -(void)dealloc{
     [_window release];
+    [_updateURL release];
     [_navigationController release];
     [super dealloc];
 }

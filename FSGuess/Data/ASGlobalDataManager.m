@@ -23,6 +23,7 @@
 @property (nonatomic,copy) NSString *bundleVersion;
 @property (nonatomic,assign) BOOL canShowRating;
 @property (nonatomic,assign) NSInteger rewardCoinWhenBecomeActive;
+@property (nonatomic,copy) NSString *handledUpdateVersion;
 @end
 
 
@@ -91,6 +92,19 @@ static ASGlobalDataManager *globalDataManager = nil;
     }
 }
 
++(NSString *)handledUpdateVersion{
+    return [ASGlobalDataManager getInstance].handledUpdateVersion;
+}
+
++(void)setHandledUpdateVersion:(NSString *)version{
+    ASGlobalDataManager *globalManager = [ASGlobalDataManager getInstance];
+    
+    if (![globalManager.handledUpdateVersion isEqualToString:version]) {
+        globalManager.handledUpdateVersion = version;
+        [ASUserDefaults setString:version forKey:@"**handledupdateversion"];
+    }
+}
+
 #pragma mark - private
 
 +(NSString *)keyForLatestMission{
@@ -108,11 +122,18 @@ static ASGlobalDataManager *globalDataManager = nil;
     return self;
 }
 
+-(void)dealloc{
+    [_bundleVersion release];
+    [_handledUpdateVersion release];
+    [super dealloc];
+}
+
 -(void)initDatas{
     [self initializeLatestMission];
     [self initializeHasShowDetail];
     [self initializeCanShowRating];
     [self initializeBundleVersion];
+    [self initializeHandledUpdateVersion];
 }
 
 -(void)initializeLatestMission{
@@ -124,6 +145,11 @@ static ASGlobalDataManager *globalDataManager = nil;
         [ASUserDefaults setString:[latesMissionString AES256EncryptWithKey:AES_LATESMISSION] forKey:latesMissionKey];
     }
     _latestMission = [latesMissionString integerValue];
+}
+
+-(void)initializeHandledUpdateVersion{
+    //已经处理过（用户选择过是否更新，只询问一次，无论用户是否选择更新，都不再提示）的更新版本
+    self.handledUpdateVersion = [ASUserDefaults stringForKey:@"**handledupdateversion"];
 }
 
 -(void)initializeHasShowDetail{
