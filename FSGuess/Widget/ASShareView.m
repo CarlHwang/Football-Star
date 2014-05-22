@@ -112,28 +112,28 @@
     
     
     //weibo
-//    UIButton *weiboBtn = [[[UIButton alloc] init] autorelease];
-//    [weiboBtn setBackgroundImage:[ASImageManager imageForPath:AS_RS_WEIBO_BUTTON cacheIt:NO withType:IMAGE_RESOURCE_TYPE_PHONEORPAD] forState:UIControlStateNormal];
-//    [weiboBtn setBackgroundImage:[ASImageManager imageForPath:AS_RS_WEIBO_BUTTONCLICK cacheIt:NO withType:IMAGE_RESOURCE_TYPE_PHONEORPAD] forState:UIControlStateHighlighted];
-//    [weiboBtn setFrame:[self frameForButtonWithIndex:4]];
-//    [weiboBtn addTarget:self action:@selector(onclickWeibo) forControlEvents:UIControlEventTouchUpInside];
-//    UILabel *weiboLabel = [[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(weiboBtn.frame), CGRectGetMaxY(weiboBtn.frame), CGRectGetWidth(weiboBtn.frame), 0.5*CGRectGetHeight(weiboBtn.frame))] autorelease];
-//    [weiboLabel setFont:[UIFont fontWithName:@"YuppySC-Regular" size:SHARE_LABEL_FONT]];
-//    [weiboLabel setTextAlignment:NSTextAlignmentCenter];
-//    [weiboLabel setBackgroundColor:[UIColor clearColor]];
-//    [weiboLabel setText:@"微博"];
+    UIButton *weiboBtn = [[[UIButton alloc] init] autorelease];
+    [weiboBtn setBackgroundImage:[ASImageManager imageForPath:AS_RS_WEIBO_BUTTON cacheIt:NO withType:IMAGE_RESOURCE_TYPE_PHONEORPAD] forState:UIControlStateNormal];
+    [weiboBtn setBackgroundImage:[ASImageManager imageForPath:AS_RS_WEIBO_BUTTONCLICK cacheIt:NO withType:IMAGE_RESOURCE_TYPE_PHONEORPAD] forState:UIControlStateHighlighted];
+    [weiboBtn setFrame:[self frameForButtonWithIndex:4]];
+    [weiboBtn addTarget:self action:@selector(onclickWeibo) forControlEvents:UIControlEventTouchUpInside];
+    UILabel *weiboLabel = [[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(weiboBtn.frame), CGRectGetMaxY(weiboBtn.frame), CGRectGetWidth(weiboBtn.frame), 0.5*CGRectGetHeight(weiboBtn.frame))] autorelease];
+    [weiboLabel setFont:[UIFont fontWithName:@"YuppySC-Regular" size:SHARE_LABEL_FONT]];
+    [weiboLabel setTextAlignment:NSTextAlignmentCenter];
+    [weiboLabel setBackgroundColor:[UIColor clearColor]];
+    [weiboLabel setText:@"微博"];
     
     [backboard addSubview:wxSessionBtn];
     [backboard addSubview:wxTimelineBtn];
     [backboard addSubview:qqSessionBtn];
     [backboard addSubview:qqTimelineBtn];
-//    [backboard addSubview:weiboBtn];
+    [backboard addSubview:weiboBtn];
     
     [backboard addSubview:wxSessionLabel];
     [backboard addSubview:wxTimelineLabel];
     [backboard addSubview:qqSessionLabel];
     [backboard addSubview:qqTimelineLabel];
-//    [backboard addSubview:weiboLabel];
+    [backboard addSubview:weiboLabel];
     
     CGPoint closeBtnCenter = CGPointMake(CGRectGetWidth(backboard.frame)-CLOSEBUTTON_LENGTH/2, CLOSEBUTTON_LENGTH/2);
     ASExpandButton *closeBtn = [ASExpandButton createButtonWithOrgSize:SQUARE_SIZE(CLOSEBUTTON_LENGTH) prsSize:SQUARE_SIZE(CLOSEBUTTON_CLICK_LENGTH) center:closeBtnCenter];
@@ -166,8 +166,8 @@
     frame.size = SHAREBUTTON_SIZE;
     CGFloat backboardWidth = BACKBOARD_SIZE.width;
     CGFloat buttonWidth = SHAREBUTTON_SIZE.width;
-//    CGFloat gap = (backboardWidth-5*buttonWidth)/6; 暂时屏蔽微博
-    CGFloat gap = (backboardWidth-4*buttonWidth)/5;
+    CGFloat gap = (backboardWidth-5*buttonWidth)/6;
+//    CGFloat gap = (backboardWidth-4*buttonWidth)/5;
     frame.origin = CGPointMake(iIndex*buttonWidth+(iIndex+1)*gap, (BACKBOARD_SIZE.height-SHAREBUTTON_SIZE.height)/2);
     return frame;
 }

@@ -94,12 +94,21 @@
     self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];
     
+    //umeng
     NSString *sUmendId = DEVICE_BASIC_IPHONE() ? UMEND_ID : UMEND_IPAD_ID;
     [MobClick startWithAppkey:sUmendId reportPolicy:SEND_INTERVAL channelId:nil];
     [MobClick checkUpdateWithDelegate:self selector:@selector(handleUpdateDictionary:)];
     
+    //weixin
     [WXApi registerApp:WX_APP_ID];
+    
+    //QQ
     [[TencentOAuth alloc] initWithAppId:QQ_APP_ID andDelegate:nil];
+    
+    //weibo
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:WEIBO_APP_ID];
+    
     return YES;
 }
 -(void)applicationWillResignActive:(UIApplication *)application{
@@ -166,7 +175,11 @@
         if (YES == [TencentOAuth CanHandleOpenURL:url]){
             return [TencentOAuth HandleOpenURL:url];
         }
+        
+    }else if ([url.absoluteString hasPrefix:[@"wb" stringByAppendingString:WEIBO_APP_ID]]){
+        return [WeiboSDK handleOpenURL:url delegate:self];
     }
+    
     return YES;
 }
 
@@ -174,6 +187,7 @@
     ASLog(@"%@",url);
     if ([url.absoluteString hasPrefix:WX_APP_ID]) {
         return [WXApi handleOpenURL:url delegate:self];
+        
     }else if ([url.absoluteString hasPrefix:[@"tencent" stringByAppendingString:QQ_APP_ID]]){
 #if __QQAPI_ENABLE__
         [QQApiInterface handleOpenURL:url delegate:self];
@@ -181,7 +195,12 @@
         if (YES == [TencentOAuth CanHandleOpenURL:url]){
             return [TencentOAuth HandleOpenURL:url];
         }
+    
+    }else if ([url.absoluteString hasPrefix:[@"wb" stringByAppendingString:WEIBO_APP_ID]]){
+        return [WeiboSDK handleOpenURL:url delegate:self];
     }
+    
+    
     return YES;
 }
 
@@ -199,6 +218,14 @@
     }else if ([resp isKindOfClass:[BaseResp class]]){
         
     }
+}
+
+-(void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+    
+}
+
+-(void)didReceiveWeiboRequest:(WBBaseRequest *)request{
+    
 }
 
 -(void)isOnlineResponse:(NSDictionary *)response{

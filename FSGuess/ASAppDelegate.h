@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "WXApi.h"
 #import "MobClick.h"
+#import "WeiboSDK.h"
 
 #if __QQAPI_ENABLE__
 #import "TencentOpenAPI/QQApiInterface.h"
 #endif
 
-@interface ASAppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate, QQApiInterfaceDelegate, UIAlertViewDelegate>
+@interface ASAppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate, QQApiInterfaceDelegate, UIAlertViewDelegate, WeiboSDKDelegate>
 @property (nonatomic,retain) UIWindow *window;
 @property (nonatomic,retain) UINavigationController *navigationController;
 @end

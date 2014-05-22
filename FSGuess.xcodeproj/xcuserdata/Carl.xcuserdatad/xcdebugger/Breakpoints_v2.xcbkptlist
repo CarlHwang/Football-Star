@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227">
+            startingLineNumber = "254"
+            endingLineNumber = "254">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "724"
-            endingLineNumber = "724"
+            startingLineNumber = "725"
+            endingLineNumber = "725"
             landmarkName = "-requestedProduct:identifier:name:price:description:"
             landmarkType = "5">
          </BreakpointContent>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "690"
-            endingLineNumber = "690"
+            startingLineNumber = "691"
+            endingLineNumber = "691"
             landmarkName = "-purchaseView:productId:"
             landmarkType = "5">
          </BreakpointContent>
@@ -360,11 +360,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "760"
-            endingLineNumber = "760"
+            startingLineNumber = "761"
+            endingLineNumber = "761"
             landmarkName = "-successfulPurchase:identifier:receipt:"
             landmarkType = "5">
          </BreakpointContent>
@@ -376,11 +376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "770"
-            endingLineNumber = "770"
+            startingLineNumber = "771"
+            endingLineNumber = "771"
             landmarkName = "-successfulPurchase:identifier:receipt:"
             landmarkType = "5">
          </BreakpointContent>
@@ -392,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "783"
-            endingLineNumber = "783"
+            startingLineNumber = "784"
+            endingLineNumber = "784"
             landmarkName = "-incompleteRestore:"
             landmarkType = "5">
          </BreakpointContent>
@@ -408,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "794"
-            endingLineNumber = "794"
+            startingLineNumber = "795"
+            endingLineNumber = "795"
             landmarkName = "@implementation ASGameController"
             landmarkType = "3">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "-applicationWillResignActive:"
             landmarkType = "5">
          </BreakpointContent>
@@ -600,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-applicationDidEnterBackground:"
             landmarkType = "5">
          </BreakpointContent>
@@ -616,11 +616,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-applicationWillEnterForeground:"
             landmarkType = "5">
          </BreakpointContent>
@@ -632,11 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
@@ -648,11 +648,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "-application:openURL:sourceApplication:annotation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1208,11 +1208,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1224,11 +1224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-application:openURL:sourceApplication:annotation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1240,11 +1240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-application:handleOpenURL:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1256,11 +1256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/Classes/Manager/ASShareManager.m"
-            timestampString = "422378903.853029"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "@implementation ASShareManager"
             landmarkType = "3">
          </BreakpointContent>
@@ -1272,11 +1272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ASAppDelegate.m"
-            timestampString = "422449299.729489"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "-onResp:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1384,11 +1384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/Classes/Manager/ASShareManager.m"
-            timestampString = "422378903.853029"
+            timestampString = "422473731.108858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "+shareToWXSessionWithImage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1592,11 +1592,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "855"
-            endingLineNumber = "855"
+            startingLineNumber = "856"
+            endingLineNumber = "856"
             landmarkName = "-adViewDidReceiveAd:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1608,11 +1608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "868"
-            endingLineNumber = "868"
+            startingLineNumber = "869"
+            endingLineNumber = "869"
             landmarkName = "-dmAdViewSuccessToLoadAd:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1624,11 +1624,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "816"
-            endingLineNumber = "816"
+            startingLineNumber = "817"
+            endingLineNumber = "817"
             landmarkName = "-loadADRequest"
             landmarkType = "5">
          </BreakpointContent>
@@ -1688,11 +1688,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "850"
-            endingLineNumber = "850"
+            startingLineNumber = "851"
+            endingLineNumber = "851"
             landmarkName = "-closeADBanner"
             landmarkType = "5">
          </BreakpointContent>
@@ -1704,11 +1704,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "837"
-            endingLineNumber = "837"
+            startingLineNumber = "838"
+            endingLineNumber = "838"
             landmarkName = "-reloadADRequest"
             landmarkType = "5">
          </BreakpointContent>
@@ -1720,11 +1720,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "864"
-            endingLineNumber = "864"
+            startingLineNumber = "865"
+            endingLineNumber = "865"
             landmarkName = "-adView:didFailToReceiveAdWithError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1736,11 +1736,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "876"
-            endingLineNumber = "876"
+            startingLineNumber = "877"
+            endingLineNumber = "877"
             landmarkName = "-dmAdViewFailToLoadAd:withError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1752,11 +1752,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "738"
-            endingLineNumber = "738"
+            startingLineNumber = "739"
+            endingLineNumber = "739"
             landmarkName = "-successfulPurchase:identifier:receipt:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1768,11 +1768,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "771"
-            endingLineNumber = "771"
+            startingLineNumber = "772"
+            endingLineNumber = "772"
             landmarkName = "@implementation ASGameController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1784,11 +1784,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "772"
-            endingLineNumber = "772"
+            startingLineNumber = "773"
+            endingLineNumber = "773"
             landmarkName = "-failedPurchase:error:message:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1800,11 +1800,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FSGuess/ViewControlelr/Game/ASGameController.m"
-            timestampString = "422209962.611863"
+            timestampString = "422473839.845217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "782"
-            endingLineNumber = "782"
+            startingLineNumber = "783"
+            endingLineNumber = "783"
             landmarkName = "-incompleteRestore:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1886,6 +1886,38 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "-handleUpdateDictionary:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FSGuess/Classes/Manager/ASShareManager.m"
+            timestampString = "422473780.948862"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "+shareToWeiboWithImage:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FSGuess/Classes/Manager/ASShareManager.m"
+            timestampString = "422474397.2614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "+recommendToWeibo"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

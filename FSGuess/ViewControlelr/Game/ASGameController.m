@@ -664,7 +664,8 @@
 }
 
 -(void)shareToWeibo{
-    
+    BOOL success = [ASShareManager shareToWeiboWithImage:_screenShot];
+    [self handleShareResult:success];
 }
 
 -(void)handleShareResult:(BOOL)success{

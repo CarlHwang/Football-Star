@@ -41,6 +41,7 @@
 		C33E3D7318D09B09008FA20C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33E3D7018D09B09008FA20C /* libMobClickLibrary.a */; };
 		C33EBACE192E58B50092B069 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C33EBACB192E58B50092B069 /* WeiboSDK.bundle */; };
 		C33EBAD6192E5A4C0092B069 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33EBAD5192E5A4C0092B069 /* libWeiboSDK.a */; };
+		C33EBAD8192E77BE0092B069 /* icon_HD.png in Resources */ = {isa = PBXBuildFile; fileRef = C33EBAD7192E77BE0092B069 /* icon_HD.png */; };
 		C3400F451893FD0A00391B95 /* ASGlobalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3400F441893FD0A00391B95 /* ASGlobalDataManager.m */; };
 		C345B7251888210800645CC9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C345B7241888210800645CC9 /* JSONKit.m */; };
 		C348056A1886B30A00BA38C9 /* ASLeagueData.m in Sources */ = {isa = PBXBuildFile; fileRef = C34805691886B30A00BA38C9 /* ASLeagueData.m */; };
@@ -174,6 +175,7 @@
 		C33EBACB192E58B50092B069 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		C33EBACC192E58B50092B069 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		C33EBAD5192E5A4C0092B069 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		C33EBAD7192E77BE0092B069 /* icon_HD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_HD.png; sourceTree = "<group>"; };
 		C3400F431893FD0A00391B95 /* ASGlobalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASGlobalDataManager.h; sourceTree = "<group>"; };
 		C3400F441893FD0A00391B95 /* ASGlobalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGlobalDataManager.m; sourceTree = "<group>"; };
 		C345B7231888210800645CC9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 		C33C983317F69B4300C55E08 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C33EBAD7192E77BE0092B069 /* icon_HD.png */,
 				C34B0849192C955B00C8E86B /* icon.png */,
 				C39E228617FDDD2A00881266 /* YuppySC-Regular.ttf */,
 				C33C983E17F69B4300C55E08 /* Images.xcassets */,
@@ -880,6 +883,7 @@
 			files = (
 				C3C301E618BF6340001EA96B /* ASClubData.json in Resources */,
 				C3C301E818BF6407001EA96B /* ASPlayerData.json in Resources */,
+				C33EBAD8192E77BE0092B069 /* icon_HD.png in Resources */,
 				C39E228717FDDD6500881266 /* YuppySC-Regular.ttf in Resources */,
 				C3C301E418BF61CB001EA96B /* ASLeagueData.json in Resources */,
 				C33C983717F69B4300C55E08 /* InfoPlist.strings in Resources */,

@@ -234,7 +234,8 @@
 }
 
 -(void)shareToWeibo{
-    
+    BOOL result = [ASShareManager recommendToWeibo];
+    [self handleShareResult:result];
 }
 
 -(void)handleShareResult:(BOOL)success{
